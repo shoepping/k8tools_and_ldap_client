@@ -1,5 +1,5 @@
 FROM bitnami/kubectl:1.20.9 as kubectl
-FROM ubnutu:latest
+FROM ubuntu:latest
 #LDAP and more Tools
 
 
