@@ -2,16 +2,16 @@ FROM alpine:3.11.6
 
 
 # https://github.com/fluxcd/flux/releases
-ENV FLUX_VERSION=1.21.0
+ENV FLUX_VERSION=latest
 # https://github.com/helm/helm/releases
-ENV HELM_VERSION=3.3.4
+ENV HELM_VERSION=latest
 # https://github.com/kubernetes/kubectl/releases
-ENV KUBECTL_VERSION=1.19.2
+ENV KUBECTL_VERSION=latest
 
 
 LABEL KUBECTL_VERSION=${KUBECTL_VERSION} \
 	HELM_VERSION=${HELM_VERSION} \
-	FLUX_VERSION=${FLUX_VERSION} \
+	FLUX_VERSION=${FLUX_VERSION}
 
 RUN apk add --update ca-certificates \
  && apk add --update -t deps curl \
